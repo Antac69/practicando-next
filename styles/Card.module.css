@@ -1,0 +1,19 @@
+.container{
+    --size:100px;
+    width: var(--size);
+    height: var(--size);
+    background: rgba(247, 247, 247, 0.285) ;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 8em;
+    left: 1.2em;
+    padding: 1.5em 1em;
+    width: 12em;
+    height: min-content;
+    border-radius: 1.5em;
+    color: black;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.1em;
+}

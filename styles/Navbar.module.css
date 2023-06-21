@@ -1,0 +1,58 @@
+.container{
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    column-gap:2em;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    column-gap: .2em;
+    background: white;
+    color: black;
+    width: min-content;
+    padding: .5em 1.1em;
+    padding-left: .5em;
+    border-radius: 0 0 1.1em 0;
+    position: relative;
+}
+.logo svg, .logo strong{
+    z-index: 1;
+}
+.logo::before{
+    content: '';
+    --size: 5rem;
+    width: var(--size);
+    height: var(--size);
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    bottom: calc(-1*(var(--size)));
+    border-radius:100% ;
+    box-shadow: calc(-1*(var(--size))/2) calc(-1*(var(--size))/2)  0px white ;
+}
+
+.logo::after{
+    content: '';
+    --size: 5rem;
+    width: var(--size);
+    height: var(--size);
+    background-color: transparent;
+    position: absolute;
+    right: calc(-1*(var(--size)));
+    top: 0;
+    border-radius:100% ;
+    box-shadow: calc(-1*(var(--size))/2) calc(-1*(var(--size))/2)  0px white ;
+}
+
+.rutas{
+    background: rgba(0, 0, 0, 0.2) ;
+    backdrop-filter: blur(5px);
+    display: flex;
+    column-gap: 1.5em;
+    list-style: none;
+    padding: .5em .8em;
+    border-radius: 50px;
+}

@@ -1,0 +1,95 @@
+.container{
+    --size:100px;
+    width: max-content;
+    color: black;
+}
+
+.top{
+    --size: 1.5em;
+    display: flex;
+    column-gap: .6em;
+    color: rgb(155, 155, 155);
+    padding: 1em 1.05em;
+    padding-right: .7em;
+    background: white;
+    width: max-content;
+    border-radius: 0 var(--size) 0 0;
+    position: relative;
+}
+
+.top::before{
+    content: '';
+    width: calc(2 * var(--size));
+    height: calc(2 * var(--size));
+    background: transparent;
+    position: absolute;
+    border-radius: 100%;
+    bottom:0;
+    right: calc(-1 * 2 * var(--size));
+    box-shadow: calc(-1 * var(--size)) calc(var(--size)) 0 white;
+}
+
+.top::after{
+    content: '';
+    width: calc(2 * var(--size));
+    height: calc(2 * var(--size));
+    background: transparent;
+    position: absolute;
+    border-radius: 100%;
+    background: transparent;
+    top:calc(-1 * 2 * var(--size));
+    left:0;
+    box-shadow: calc(-1 * var(--size)) calc(var(--size)) 0 white;
+}
+
+.top div{
+    --color :#0B0B65;
+    padding: .5em .7em;
+    border-radius: 5em;
+    background: white;
+}
+
+.pill{
+    border: 1px solid var(--color) ;
+    color: var(--color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1{
+    font-size: 5em;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.h1 > span{
+    --size:.3em;
+    background: white;
+    padding: 0.1em .15em;
+    padding-right: .35em;
+    border-radius: 0 .3em 0 0;
+    position: relative;
+    width: max-content;
+}
+.h1 > span::before{
+    content: '';
+    width: calc(2 * var(--size));
+    height: calc(2 * var(--size));
+    background: transparent;
+    position: absolute;
+    border-radius: 100%;
+    bottom:0;
+    right: calc(-1 * 2 * var(--size));
+    box-shadow: calc(-1 * var(--size)) calc(var(--size)) 0 white;
+}
+
+.h1 span:nth-child(1){
+    padding-top: 0 ;
+}
+
+.h1 span:nth-child(2){
+    padding-right: .4em ;
+}
