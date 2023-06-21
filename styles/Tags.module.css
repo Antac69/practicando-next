@@ -2,5 +2,22 @@
     --size:100px;
     width: var(--size);
     height: var(--size);
-    background: red;
+    color: black;
+}
+.containerTags{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    padding: 1em;
+    padding-bottom: 1.37em;
+    list-style: none;
+    bottom: 0;
+    width: 16em;
+    gap: .7em;
+}
+.tag{
+    padding: .5em .8em;
+    border-radius: 1em;
+    background: white;
+    width: max-content;
 }

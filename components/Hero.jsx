@@ -10,7 +10,7 @@ import Tags from "@/components/Tags";
 const Hero = () => {
   return (
     <main className={style.container}>
-      <Image alt="fondo" src={fondo}></Image>/img/fondo.webp
+      <Image priority alt="fondo" src={fondo}></Image>/img/fondo.webp
       <Navbar />
       <br />
       <Card></Card>
