@@ -8,16 +8,16 @@
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    padding: 1em;
-    padding-bottom: 1.37em;
+    padding: 1rem;
+    padding-bottom: 1.37rem;
     list-style: none;
     bottom: 0;
-    width: 16em;
-    gap: .7em;
+    width: 16rem;
+    gap: .7rem;
 }
 .tag{
-    padding: .5em .8em;
-    border-radius: 1em;
+    padding: .5rem .8rem;
+    border-radius: 1rem;
     background: white;
     width: max-content;
 }
