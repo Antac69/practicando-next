@@ -21,11 +21,15 @@
   width: min-content;
   display: flex;
   z-index: 1;
+  flex-direction: column-reverse;
 }
 
 @media screen and (min-width: 1024px) {
   .container {
     width: 75vw;
+  }
+  .containerDown {
+    flex-direction: row;
   }
 }
 
@@ -36,7 +40,6 @@
   }
   .containerDown {
     width: 100%;
-    flex-direction: column-reverse;
   }
   /* .container > * {
     z-index: 1;
