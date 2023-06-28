@@ -1,0 +1,11 @@
+.container{
+    color: black;
+}
+
+.top
+{
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+
+}

@@ -16,9 +16,7 @@ export default function Home() {
       </Head>
       <Hero></Hero>
       <Info></Info>
-      <footer>
-        Desing 
-      </footer>
+      <footer>Desing</footer>
     </div>
   );
 }
