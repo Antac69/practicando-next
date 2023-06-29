@@ -1,6 +1,6 @@
 .container {
   background: white;
-  border-radius: 2.5em;
+  border-radius: 0 2.5em 2.5em 0;
   border: 0.5em solid white;
   position: relative;
   overflow: hidden;

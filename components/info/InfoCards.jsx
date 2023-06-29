@@ -7,32 +7,69 @@ import Typography from "@mui/joy/Typography";
 import Image from "next/image";
 import cad1 from "@/public/img/card1.jpg";
 import Chip from "@mui/joy/Chip";
-import Button from "@mui/material/Button";
-import { FiDribbble,FiInstagram } from "react-icons/fi";
+import IconButton from "@mui/joy/Button";
+import { FiDribbble, FiInstagram } from "react-icons/fi";
+import { Box, Grid } from "@mui/joy";
 
 const InfoCards = () => {
   return (
-    <section className={styles.containerCards}>
+    <Grid container marginX={1.5}>
       <Card
-        component="li"
-        sx={{ minWidth: 300, flexGrow: 1, "--Card-radius": "30px" }}
+        sx={{
+          Width: "100%",
+          flexGrow: 1,
+          paddingLeft: 3,
+          "--Card-radius": "30px",
+        }}
       >
         <CardCover>
           <Image src={cad1} alt="" />
         </CardCover>
-        <div>
-          <Chip color="neutral" variant="soft" size="lg">
+        <Grid
+          paddingTop={2}
+          container
+          spacing={2}
+          columns={2}
+          justifyContent="space-between"
+        >
+          <Chip
+            sx={{
+              background: "white",
+            }}
+            paddingLeft={2}
+            color="neutral"
+            variant="soft"
+            size="lg"
+          >
             How it works
           </Chip>
-          <div>
-            <Button variant="soft" color="primary">
-              <FiInstagram></FiInstagram>
-            </Button>
-            <Button variant="soft" color="primary">
-              <FiDribbble/>
-            </Button>
-          </div>
-        </div>
+          <Grid container columnGap={1} paddingRight={2}>
+            <IconButton
+              color="soft"
+              sx={{
+                background: "rgba(255, 255, 255, 0.8)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "50px",
+                padding: "8px",
+                color: "purple",
+              }}
+            >
+              <FiInstagram size={23} />
+            </IconButton>
+            <IconButton
+              color="soft"
+              sx={{
+                background: "rgba(255, 255, 255, 0.8)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "50px",
+                padding: "8px",
+                color: "purple",
+              }}
+            >
+              <FiDribbble size={23} />
+            </IconButton>
+          </Grid>
+        </Grid>
         <CardContent>
           <Typography
             level="h6"
@@ -44,7 +81,7 @@ const InfoCards = () => {
           </Typography>
         </CardContent>
       </Card>
-    </section>
+    </Grid>
   );
 };
 
