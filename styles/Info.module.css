@@ -8,3 +8,14 @@
     padding: 1em;
     gap: 1em;
 }
+
+.btnCard::before{
+    --size:50px;
+    content: 'hola';
+    background: red;
+    height: var(--size);
+    width: var(--size);
+    position: absolute;
+    left: -100%;
+    top: 0;
+}
