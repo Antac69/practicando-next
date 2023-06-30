@@ -19,13 +19,13 @@ import card3 from "@/public/img/2 fondo.jpg";
 
 const InfoCards = () => {
   return (
-    <Grid container marginX={1.5}>
+    <Grid container marginX={1.5} direction="column">
       <Card
         sx={{
           Width: "100%",
           minHeight: "320px",
           flexGrow: 1,
-          "--Card-radius": "30px",
+          "--Card-radius": "1.5em",
         }}
       >
         <CardCover>
@@ -94,14 +94,14 @@ const InfoCards = () => {
           sx={{
             position: "absolute",
             bottom: "0",
-            right: 0,
+            right: "0",
             borderRadius: 50,
             padding: "1em 0.83em 1em 1.171em",
             justifyContent: "center",
             bgcolor: "common.black",
             outline: ".5em solid",
           }}
-          style={styles.btnCard}
+          className={styles.btnCard}
         >
           <FiPlay size={18}></FiPlay>
         </IconButton>

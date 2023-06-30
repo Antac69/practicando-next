@@ -9,13 +9,31 @@
     gap: 1em;
 }
 
+.btnCard{
+    z-index: 1;
+}
+
 .btnCard::before{
-    --size:50px;
-    content: 'hola';
-    background: red;
+    --size:2.5em;
+    content: '';
+    background: transparent;
+    height: var(--size);
+    width: calc(var(--size) * 2);
+    border-radius:0 2em 2em 0;
+    position: absolute;
+    left: calc(-2.195  * (var(--size)));
+    bottom:0;
+    box-shadow: 12px 16px 0  white;
+}
+.btnCard::after{
+    --size:3em;
+    content: '';
+    background: transparent;
     height: var(--size);
     width: var(--size);
+    border-radius:100%;
     position: absolute;
-    left: -100%;
-    top: 0;
+    top:calc(-1.2 * var(--size));
+    right:0;
+    box-shadow: 22px 14px 0  white;
 }
