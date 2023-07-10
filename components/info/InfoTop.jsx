@@ -15,7 +15,7 @@ const InfoTop = () => {
       sx={{
         border:'1px solid',
         borderRadius: '50px',
-        width: "min-content",
+        minWidth: "min-content",
         [`& .${selectClasses.indicator}`]: {
           transition: "0.2s",
           [`&.${selectClasses.expanded}`]: {
@@ -31,7 +31,7 @@ const InfoTop = () => {
         English
       </Option>
     </Select>
-    <Button sx={{ borderRadius: '50px',border:'2px solid'}}  variant="outlined"color="neutral" endDecorator={<IoIosArrowDropright size="20" />}>Let&apos;s create</Button>
+    <Button sx={{ borderRadius: '50px',border:'2px solid'}} fullWidth={true}  variant="outlined"color="neutral" endDecorator={<IoIosArrowDropright size="20" />}>Let&apos;s create</Button>
   </section>
   )
 }

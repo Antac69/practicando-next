@@ -8,6 +8,9 @@ import Image from "next/image";
 import cad1 from "@/public/img/card1.jpg";
 import Chip from "@mui/joy/Chip";
 import IconButton from "@mui/joy/Button";
+import AvatarGroup from "@mui/joy/AvatarGroup";
+import Avatar from '@mui/joy/Avatar';
+
 import {
   FiDribbble,
   FiInstagram,
@@ -19,13 +22,15 @@ import card3 from "@/public/img/2 fondo.jpg";
 
 const InfoCards = () => {
   return (
-    <Grid container marginX={1.5} direction="column">
+    <Grid container marginX={1.5} direction="column" gap={2}>
       <Card
         sx={{
           Width: "100%",
-          minHeight: "320px",
+          minHeight: "250px",
           flexGrow: 1,
+          overflow: "hidden",
           "--Card-radius": "1.5em",
+          boxShadow: "none",
         }}
       >
         <CardCover>
@@ -33,14 +38,14 @@ const InfoCards = () => {
         </CardCover>
         <Grid container columns={2} justifyContent="space-between" width="100%">
           <Chip
-            paddingLeft={2}
             variant="solid"
             size="lg"
             sx={{
+              paddingLeft:2,
               bgcolor: "background.body",
-              fontSize: "1.3em",
               color: "info.500",
               fontFamily: "'Questrial', sans-serif",
+              fontSize: "1.3em",
             }}
           >
             How it works
@@ -96,7 +101,7 @@ const InfoCards = () => {
             bottom: "0",
             right: "0",
             borderRadius: 50,
-            padding: "1em 0.83em 1em 1.171em",
+            padding: "1em 0.90em 1em 1.1em",
             justifyContent: "center",
             bgcolor: "common.black",
             outline: ".5em solid",
@@ -106,22 +111,53 @@ const InfoCards = () => {
           <FiPlay size={18}></FiPlay>
         </IconButton>
       </Card>
-      <Card
+      <Card 
         sx={{
           Width: "100%",
+          height: "150px",
           flexGrow: 1,
           paddingLeft: 3,
+          display:'flex',
+          flexDirection:'row',
+          color: "white",
           "--Card-radius": "30px",
+          background: "linear-gradient(90deg,#0D0BC4,#605CF4 50%)",
+          alignItems:'center',
         }}
       >
-        <CardContent>Explore collections</CardContent>
-        <IconButton>
+        <AvatarGroup
+          sx={{
+            "--Avatar-ringSize": "0px",
+            "--Avatar-size": "3em",
+          }}
+        >
+          <Avatar alt="image1" src="/img/card1.jpg" />
+          <Avatar alt="image2" src="/img/2 fondo.jpg"/>
+          <Avatar alt="image3" src="/img/hugol-halpingston-n-g5PWDZnro-unsplash.jpg"/>
+        </AvatarGroup>
+          <Typography fontFamily="'Questrial', sans-serif" sx={{fontSize:'1.6em',lineHeight:'1em'}}color="initial" width="min-content">
+          Explore collections
+          </Typography>
+        <IconButton
+          sx={{
+            position: "absolute",
+            bottom: "0",
+            right: "0",
+            borderRadius: 50,
+            padding: "1em 0.90em 1em 1.05em",
+            justifyContent: "center",
+            bgcolor: "common.black",
+            outline: ".5em solid",
+          }}
+          className={styles.btnCard}
+        >
           <FiChevronRight></FiChevronRight>
         </IconButton>
       </Card>
       <Card
         sx={{
           Width: "100%",
+          height:'180px',
           flexGrow: 1,
           paddingLeft: 3,
           "--Card-radius": "30px",
@@ -130,17 +166,21 @@ const InfoCards = () => {
         <CardCover>
           <Image src={card3} alt="" />
         </CardCover>
-
-        <CardContent>
+        <CardContent sx={{color:'white',width:'80%'}}>
           Have questions? Contact our manager and get answers
         </CardContent>
-        <CardContent>
-          FAQ{" "}
+        <CardContent sx={{flexDirection:'row',alignItems:'flex-end'}}>
+          <Typography sx={{fontSize:'4em'}} lineHeight={.9} width='min-content'>
+          FAQ
+          </Typography>
           <Chip
             sx={{
-              background: "white",
+              height:'min-content',
+              paddingLeft:2,
+              bgcolor: "background.body",
+              color: "info.500",
+              fontFamily: "'Questrial', sans-serif",
             }}
-            paddingLeft={2}
             color="neutral"
             variant="soft"
             size="lg"
@@ -148,7 +188,19 @@ const InfoCards = () => {
             Popular
           </Chip>
         </CardContent>
-        <IconButton>
+        <IconButton
+          sx={{
+            position: "absolute",
+            bottom: "0",
+            right: "0",
+            borderRadius: 50,
+            padding: "1em 0.90em 1em 1.05em",
+            justifyContent: "center",
+            bgcolor: "common.black",
+            outline: ".5em solid",
+          }}
+          className={styles.btnCard}
+        >
           <FiChevronRight></FiChevronRight>
         </IconButton>
       </Card>

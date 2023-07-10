@@ -14,26 +14,26 @@
 }
 
 .btnCard::before{
-    --size:2.5em;
+    --size:2.6em;
     content: '';
     background: transparent;
     height: var(--size);
     width: calc(var(--size) * 2);
-    border-radius:0 2em 2em 0;
+    border-radius:0 2em 2.1em 0;
     position: absolute;
-    left: calc(-2.195  * (var(--size)));
+    left: calc(-2.19  * (var(--size)));
     bottom:0;
-    box-shadow: 12px 16px 0  white;
+    box-shadow: 10px 16px 0  white;
 }
 .btnCard::after{
     --size:3em;
     content: '';
     background: transparent;
     height: var(--size);
-    width: var(--size);
-    border-radius:100%;
+    width: calc(var(--size) * 1.2);
+    border-radius:0 0 1.2em 2em;
     position: absolute;
-    top:calc(-1.2 * var(--size));
+    top:calc(-1.164 * var(--size));
     right:0;
-    box-shadow: 22px 14px 0  white;
+    box-shadow: 22px 11px 0  white;
 }
