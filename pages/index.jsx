@@ -2,11 +2,13 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import Hero from "@/components/Hero";
 import Info from "@/components/Info";
+import { CssVarsProvider } from '@mui/joy/styles';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
+    <CssVarsProvider defaultMode="system" >
     <div className="container">
       <Head>
         <title>Guide | inspiracion</title>
@@ -18,5 +20,6 @@ export default function Home() {
       <Info></Info>
       <footer>Desing</footer>
     </div>
+    </CssVarsProvider>
   );
 }
